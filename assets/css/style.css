@@ -1,0 +1,27 @@
+body{
+
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    
+}
+#canvas{
+
+height: 280px;
+width: 255px;
+margin:  auto;
+/* Flexbox styling for card animation*/
+display: flex;
+flex-wrap: wrap;
+
+background-color: aquamarine;
+border: 5px solid lightcyan;
+
+}
+
+.card{
+
+    height: 55px;
+    width: 58px;
+    margin: 2.5px;
+
+}
