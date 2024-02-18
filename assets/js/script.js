@@ -79,7 +79,7 @@ function startGame()   {
             row.push(cardImage); //JavaScript
             let card = document.createElement("img"); // HTML 
             card.id = r.toString() + "-" + c.toString();
-            card.src =  "../assets/images/" + cardImage + ".jpg"; 
+            card.src =  "assets/images/" + cardImage + ".jpg"; 
             card.classList.add("card");
             // Listener click event for when the user clicks on the card. 
             card.addEventListener("click", selectCard);
@@ -109,7 +109,7 @@ function hideCards (){
         let row = [];
         for (let c = 0;  c < columns; c++){
             let card = document.getElementById(r.toString() + "-" + c.toString());
-            card.src = `../../assets/images/fruitmcover.jpg`
+            card.src = `/../assets/images/fruitmcover.jpg`
 
 }
     }
@@ -128,7 +128,7 @@ function selectCard() {
             let r = parseInt(coord[0]);
             let c = parseInt(coord[1]);
 
-            cardOne.src = "../assets/images/" + canvas[r][c]  + ".jpg";  
+            cardOne.src = "/assets/images/" + canvas[r][c]  + ".jpg";  
 
         }
 
@@ -139,7 +139,7 @@ function selectCard() {
             let r = parseInt(coord[0]);
             let c = parseInt(coord[1]);
 
-            cardTwo.src = "../assets/images/" + canvas[r][c]  + ".jpg"; 
+            cardTwo.src = "/assets/images/" + canvas[r][c]  + ".jpg"; 
             setTimeout(update, 1000);
 
         }
@@ -155,8 +155,8 @@ function update () {
 
     if (cardOne.src != cardTwo.src){
 
-        cardOne.src=`../../assets/images/fruitmcover.jpg`
-        cardTwo.src=`../../assets/images/fruitmcover.jpg`
+        cardOne.src=`/assets/images/fruitmcover.jpg`
+        cardTwo.src=`/assets/images/fruitmcover.jpg`
         // Counter to increase move event by 1 
         moves += 1;
         document.getElementById("moves").innerText = moves;
