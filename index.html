@@ -14,17 +14,38 @@
 
     <h1>Fruit Memory Card Game</h1>
 
-    <label id="minutes">00</label>:<label id="seconds">00</label>
+    <span class ="timer">0:00</span>
 
     <h2>Moves: <span id="moves">0</span></h2>
 
-    <h2>Pairs made: <span id="pairs_made">0 of 8</span></h2>
-
     <div id="canvas"></div>
+
+    <br>
 
     <button onclick="newGame()">New Game</button>
 
-    <button>How to Play</button>
+    <!-- Trigger/Open The Modal -->
+<button id="howToPlay">How to Play</button>
+
+<!-- The Modal -->
+<div id="play-modal" class="playmodal">
+
+  <!-- How to Play Modal Pop up box-->
+  <div class="rules-modal">
+    <span class="close">&times;</span>
+    <h2>Rules of the Game</h2>
+    <ol>
+        <li> To Start the game click on 1 card to turn it over.</li>
+        <li>Flip another card, if it matches. Well done you have found a pair.</li>
+        <li>If not both cards will be flipped back over till you find a matching pair.</li>
+        <li>There are 8 fruit cards to match to complete the game.</li>   
+        <li>Try to beat your quickest time or least amount of moves.</li>
+        <br>
+        <strong>Good Luck and enjoy!</strong>
+    </ol>
+  </div>
+
+</div>
 
  <script src="assets/js/script.js"></script>   
 </body>

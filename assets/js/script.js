@@ -4,8 +4,6 @@
 
 var moves = 0;
 
-var pairs_made = 0;
-
 var cardFruits = ["apple", "banana", "blueberry", "lemon", "mandarin", "mango", "orange", "strawberry"]; // Our fruit objects the player needs to match
 
 var cardList; // Our Deck of cards
@@ -19,29 +17,34 @@ var columns = 4;
 var cardOne;
 var cardTwo;
 
-/* Timer Function - https://stackoverflow.com/questions/55031097/how-do-i-start-a-timer-on-a-click#:~:text=the%20most%20basic%20way%20to,('%23button').
+// How to Play Pop-up Modal adapted using https://www.w3schools.com/howto/howto_css_modals.asp */
 
-let timer;
-let minutes = 0;
-let seconds = 0;
-let TimerOn = false;
 
-function startTimer () {
+// Get the modal element
+var modal = document.getElementById("play-modal");
 
-    timer.innerHTML = minutes + seconds;
-    seconds++;
+// Get the button that opens the modal
+var btn = document.getElementById("howToPlay");
 
-    if (seconds >= 60) {
-    seconds = 0;
-    minutes++;
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
   }
 }
-
-function restartTimer(){
-    clearInterval(timer)
-}
-
-*/
 
 
 
@@ -143,10 +146,42 @@ function hideCards (){
 }
 
 
+/* Timer Function - https://stackoverflow.com/questions/55031097/how-do-i-start-a-timer-on-a-click#:~:text=the%20most%20basic%20way%20to,('%23button').
+
+/* JavaScript */
+var timer; // This variable will hold the interval function
+var seconds = 0;
+var minutes = 0;
+
+function startTimer() {
+  timer = setInterval(updateTimer, 1000); // Update the timer every second
+}
+
+function updateTimer() {
+  seconds++;
+  if (seconds == 60) {
+    seconds = 0;
+    minutes++;
+  }
+  var time = (minutes < 10 ? "0" + minutes : minutes) + ":" + (seconds < 10 ? "0" + seconds : seconds);
+  document.querySelector(".timer").textContent = time;
+}
+
+
+function starter(){
+    document.querySelector(".cardOne").addEventListener("click", function() {
+        startTimer();
+      });
+
+
+}
+
+
 // Function to track when the user clicks on two cards to flip them over. 
 
 function selectCard() {
 
+    
     
     if(this.src.includes("fruitmcover")) {
         if(!cardOne){
@@ -161,8 +196,9 @@ function selectCard() {
 
             cardOne.src = "assets/images/" + canvas[r][c]  + ".jpg";  
         
-                setInterval(startTimer(), 1000);
-             { once: true };
+        
+                
+            
         
             
 
@@ -179,6 +215,8 @@ function selectCard() {
             setTimeout(update, 1000);
 
         }
+
+        
         
         }
         
@@ -194,7 +232,7 @@ function update () {
         cardOne.src=`assets/images/fruitmcover.jpg`
         cardTwo.src=`assets/images/fruitmcover.jpg`
         // Counter to increase move event by 1 
-        moves += 1;
+        moves ++;
         document.getElementById("moves").innerText = moves;
 
     }
