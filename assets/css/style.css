@@ -1,5 +1,8 @@
 body{
 
+    background: url("../../assets/images/fruitbackground.jpg");
+    background-size: cover;
+
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
     
@@ -13,8 +16,8 @@ margin:  auto;
 display: flex;
 flex-wrap: wrap;
 
-background-color: aquamarine;
-border: 5px solid lightcyan;
+background-color: lightcyan;
+border: 5px solid turquoise;
 
 }
 

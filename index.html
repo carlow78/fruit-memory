@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
-    <script src="assets/js/script.js"></script>
+    
 
     <title>Fruit Memory Card Game</title>
 
@@ -14,7 +14,7 @@
 
     <h1>Fruit Memory Card Game</h1>
 
-    <h2>Time: <span id="timer">0:00</span></h2>
+    <label id="minutes">00</label>:<label id="seconds">00</label>
 
     <h2>Moves: <span id="moves">0</span></h2>
 
@@ -22,11 +22,12 @@
 
     <div id="canvas"></div>
 
-    <button>New Game</button>
+    <button onclick="newGame()">New Game</button>
 
     <button>How to Play</button>
 
-
+ <script src="assets/js/script.js"></script>   
 </body>
+
 
 </html>

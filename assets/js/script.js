@@ -1,6 +1,6 @@
 // ** setting our function variable for the game
 
-var timer = 0;
+
 
 var moves = 0;
 
@@ -18,6 +18,31 @@ var columns = 4;
 
 var cardOne;
 var cardTwo;
+
+/* Timer Function - https://stackoverflow.com/questions/55031097/how-do-i-start-a-timer-on-a-click#:~:text=the%20most%20basic%20way%20to,('%23button').
+
+let timer;
+let minutes = 0;
+let seconds = 0;
+let TimerOn = false;
+
+function startTimer () {
+
+    timer.innerHTML = minutes + seconds;
+    seconds++;
+
+    if (seconds >= 60) {
+    seconds = 0;
+    minutes++;
+  }
+}
+
+function restartTimer(){
+    clearInterval(timer)
+}
+
+*/
+
 
 
 // Function to shuffle our cards before starting the game
@@ -59,7 +84,7 @@ console.log(cardList);
 
 /*
 
-To start the game the below function will copy and paste our array randomly on screen.
+To start the game the below function will copy and paste our deck of fruit cards (array) randomly on screen.
 Starting with the first (1) square on screen down to the last (16).
 
 */
@@ -82,6 +107,7 @@ function startGame()   {
             card.src =  "assets/images/" + cardImage + ".jpg"; 
             card.classList.add("card");
             // Listener click event for when the user clicks on the card. 
+            
             card.addEventListener("click", selectCard);
             document.getElementById("canvas").append(card);
 
@@ -89,6 +115,7 @@ function startGame()   {
 
         // Push the cards to the screen
         canvas.push(row);
+    
 
 }
 
@@ -120,15 +147,24 @@ function hideCards (){
 
 function selectCard() {
 
+    
     if(this.src.includes("fruitmcover")) {
         if(!cardOne){
             cardOne = this;
+            
 
             let coord = cardOne.id.split("-");
             let r = parseInt(coord[0]);
             let c = parseInt(coord[1]);
+            
+
 
             cardOne.src = "assets/images/" + canvas[r][c]  + ".jpg";  
+        
+                setInterval(startTimer(), 1000);
+             { once: true };
+        
+            
 
         }
 
@@ -168,5 +204,19 @@ function update () {
 
 
 }
+
+
+// New game/restart game function - using page refresh
+
+https://teamtreehouse.com/community/any-one-know-how-to-make-a-restart-button
+
+
+function newGame (){
+
+    window.location.reload();
+
+
+}
+
 
 
