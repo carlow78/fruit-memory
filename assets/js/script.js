@@ -17,16 +17,18 @@ var columns = 4;
 var cardOne;
 var cardTwo;
 
+let startMe=false;
+
 // How to Play Pop-up Modal adapted using https://www.w3schools.com/howto/howto_css_modals.asp */
 
 
 // Get the modal element
 var modal = document.getElementById("play-modal");
 
-// Get the button that opens the modal
+// How to Play button to launch popup modal
 var btn = document.getElementById("howToPlay");
 
-// Get the <span> element that closes the modal
+// Close button
 var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on the button, open the modal
@@ -34,12 +36,12 @@ btn.onclick = function() {
   modal.style.display = "block";
 }
 
-// When the user clicks on <span> (x), close the modal
+// Close button function
 span.onclick = function() {
   modal.style.display = "none";
 }
 
-// When the user clicks anywhere outside of the modal, close it
+// Closes pop-up when user clicks outside
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
@@ -48,7 +50,12 @@ window.onclick = function(event) {
 
 
 
-// Function to shuffle our cards before starting the game
+/* Card game functioning adapted following along with online tutorial 
+https://www.youtube.com/watch?v=wz9jeI9M9hI
+*/
+
+
+// Shuffle cards function
 
 window.onload = function() {
     shuffleCards();
@@ -168,51 +175,61 @@ function updateTimer() {
 }
 
 
-function starter(){
-    document.querySelector(".cardOne").addEventListener("click", function() {
-        startTimer();
-      });
+/* function starter(){
+    
+      })*/
 
 
-}
+    
 
 
 // Function to track when the user clicks on two cards to flip them over. 
 
 function selectCard() {
 
-    
-    
+ 
     if(this.src.includes("fruitmcover")) {
-        if(!cardOne){
-            cardOne = this;
+       
+      if(!cardOne && !startMe){
+            cardOne = this; 
+            startMe = true;
             
 
             let coord = cardOne.id.split("-");
             let r = parseInt(coord[0]);
             let c = parseInt(coord[1]);
             
-
-
-            cardOne.src = "assets/images/" + canvas[r][c]  + ".jpg";  
-        
-        
-                
+            cardOne.src = "assets/images/" + canvas[r][c]  + ".jpg"; 
+            window.onload(startTimer);
             
-        
             
-
         }
+          if (this.src.includes("fruitmcover")){
+            if(!cardOne && startMe){
+            cardOne = this;
+
+            
+            let coord = cardOne.id.split("-");
+            let r = parseInt(coord[0]);
+            let c = parseInt(coord[1]);
+
+
+            cardOne.src = "assets/images/" + canvas[r][c]  + ".jpg"; 
+        
+            
+          }
 
         else if (!cardTwo && this != cardOne){
             cardTwo = this;
+            
 
             let coord = cardTwo.id.split("-");
             let r = parseInt(coord[0]);
             let c = parseInt(coord[1]);
 
-            cardTwo.src = "assets/images/" + canvas[r][c]  + ".jpg"; 
+            cardTwo.src = "assets/images/" + canvas[r][c]  + ".jpg";      
             setTimeout(update, 1000);
+            startMe=false;
 
         }
 
@@ -220,7 +237,8 @@ function selectCard() {
         
         }
         
-        }
+      }
+    }
 
 // If function to check if the two cards selected are the same if they are they remaining showing if not they return to face down state. Till matched.
 
@@ -255,6 +273,3 @@ function newGame (){
 
 
 }
-
-
-
