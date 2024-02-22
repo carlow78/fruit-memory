@@ -100,11 +100,8 @@ Starting with the first (1) square on screen down to the last (16).
 */
 
 
-
-
 function startGame()   {
-
-    
+ 
 
     // r for rows, c for columns
     for (let r = 0; r < rows; r++) {
@@ -175,49 +172,33 @@ function updateTimer() {
 }
 
 
-/* function starter(){
-    
-      })*/
-
-
-    
-
-
 // Function to track when the user clicks on two cards to flip them over. 
 
 function selectCard() {
 
+
  
-    if(this.src.includes("fruitmcover")) {
+  if(this.src.includes("fruitmcover")) {
        
-      if(!cardOne && !startMe){
+      if(!cardOne ){
             cardOne = this; 
-            startMe = true;
             
-
+            
             let coord = cardOne.id.split("-");
             let r = parseInt(coord[0]);
             let c = parseInt(coord[1]);
             
             cardOne.src = "assets/images/" + canvas[r][c]  + ".jpg"; 
-            window.onload(startTimer);
+      
             
-            
-        }
-          if (this.src.includes("fruitmcover")){
-            if(!cardOne && startMe){
-            cardOne = this;
+      }
 
-            
-            let coord = cardOne.id.split("-");
-            let r = parseInt(coord[0]);
-            let c = parseInt(coord[1]);
-
-
-            cardOne.src = "assets/images/" + canvas[r][c]  + ".jpg"; 
-        
-            
-          }
+      if(!startMe){
+        startMe=true;
+        startTimer();
+    
+      }
+ 
 
         else if (!cardTwo && this != cardOne){
             cardTwo = this;
@@ -229,16 +210,17 @@ function selectCard() {
 
             cardTwo.src = "assets/images/" + canvas[r][c]  + ".jpg";      
             setTimeout(update, 1000);
-            startMe=false;
+            clearInterval(startTimer);
 
         }
 
+        
         
         
         }
         
       }
-    }
+
 
 // If function to check if the two cards selected are the same if they are they remaining showing if not they return to face down state. Till matched.
 
