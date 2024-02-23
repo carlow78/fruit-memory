@@ -4,6 +4,8 @@
 
 var moves = 0;
 
+var pairs = 0;
+
 var cardFruits = ["apple", "banana", "blueberry", "lemon", "mandarin", "mango", "orange", "strawberry"]; // Our fruit objects the player needs to match
 
 var cardList; // Our Deck of cards
@@ -34,19 +36,19 @@ var span = document.getElementsByClassName("close")[0];
 // When the user clicks on the button, open the modal
 btn.onclick = function() {
   modal.style.display = "block";
-}
+};
 
 // Close button function
 span.onclick = function() {
   modal.style.display = "none";
-}
+};
 
 // Closes pop-up when user clicks outside
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
-}
+};
 
 
 
@@ -61,7 +63,7 @@ window.onload = function() {
     shuffleCards();
     startGame();
 
-}
+};
 
 // Shuffling cards function using math floor and random.
 
@@ -143,7 +145,7 @@ function hideCards (){
         let row = [];
         for (let c = 0;  c < columns; c++){
             let card = document.getElementById(r.toString() + "-" + c.toString());
-            card.src = `assets/images/fruitmcover.jpg`
+            card.src = `assets/images/fruitmcover.jpg`;
 
 }
     }
@@ -171,11 +173,9 @@ function updateTimer() {
   document.querySelector(".timer").textContent = time;
 }
 
-
 // Function to track when the user clicks on two cards to flip them over. 
 
 function selectCard() {
-
 
  
   if(this.src.includes("fruitmcover")) {
@@ -189,17 +189,18 @@ function selectCard() {
             let c = parseInt(coord[1]);
             
             cardOne.src = "assets/images/" + canvas[r][c]  + ".jpg"; 
-      
+  
             
       }
 
-      if(!startMe){
+      if (!startMe) {
+
         startMe=true;
         startTimer();
     
       }
  
-
+      
         else if (!cardTwo && this != cardOne){
             cardTwo = this;
             
@@ -210,17 +211,16 @@ function selectCard() {
 
             cardTwo.src = "assets/images/" + canvas[r][c]  + ".jpg";      
             setTimeout(update, 1000);
-            clearInterval(startTimer);
+            //clearInterval(startTimer);
 
         }
 
-        
-        
-        
-        }
         
       }
 
+
+        }
+ 
 
 // If function to check if the two cards selected are the same if they are they remaining showing if not they return to face down state. Till matched.
 
@@ -229,19 +229,30 @@ function update () {
 
     if (cardOne.src != cardTwo.src){
 
-        cardOne.src=`assets/images/fruitmcover.jpg`
-        cardTwo.src=`assets/images/fruitmcover.jpg`
+        cardOne.src=`assets/images/fruitmcover.jpg`;
+        cardTwo.src=`assets/images/fruitmcover.jpg`;
         // Counter to increase move event by 1 
         moves ++;
         document.getElementById("moves").innerText = moves;
 
-    }
-
+  
+    
     cardOne = null;
     cardTwo = null;
 
+    }
 
-}
+    else if (cardOne.src == cardTwo.src) {
+
+      pairs++;
+      document.getElementById("pairs").innerText = pairs;
+
+    }
+
+
+  }
+
+    
 
 
 // New game/restart game function - using page refresh
