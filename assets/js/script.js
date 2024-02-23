@@ -177,7 +177,6 @@ function updateTimer() {
 
 function selectCard() {
 
- 
   if(this.src.includes("fruitmcover")) {
        
       if(!cardOne ){
@@ -189,7 +188,6 @@ function selectCard() {
             let c = parseInt(coord[1]);
             
             cardOne.src = "assets/images/" + canvas[r][c]  + ".jpg"; 
-  
             
       }
 
@@ -199,12 +197,10 @@ function selectCard() {
         startTimer();
     
       }
- 
-      
+  
         else if (!cardTwo && this != cardOne){
             cardTwo = this;
             
-
             let coord = cardTwo.id.split("-");
             let r = parseInt(coord[0]);
             let c = parseInt(coord[1]);
@@ -218,40 +214,33 @@ function selectCard() {
         
       }
 
-
         }
  
 
 // If function to check if the two cards selected are the same if they are they remaining showing if not they return to face down state. Till matched.
 
+function update(){
 
-function update () {
+if(cardOne.src === cardTwo.src){
+  console.log('cards match');
+  pairs++;
+  document.getElementById("pairs").innerText = pairs;
+  cardOne.removeEventListener("click", selectCard);
+  cardTwo.removeEventListener("click", selectCard);
+} else{
+  console.log('Cards do not match');
+  cardOne.src = 'assets/images/fruitmcover.jpg';
+  cardTwo.src = 'assets/images/fruitmcover.jpg';
+}
 
-    if (cardOne.src != cardTwo.src){
+cardOne = null;
+cardTwo = null;
 
-        cardOne.src=`assets/images/fruitmcover.jpg`;
-        cardTwo.src=`assets/images/fruitmcover.jpg`;
-        // Counter to increase move event by 1 
-        moves ++;
-        document.getElementById("moves").innerText = moves;
-
-  
-    
-    cardOne = null;
-    cardTwo = null;
-
-    }
-
-    else if (cardOne.src == cardTwo.src) {
-
-      pairs++;
-      document.getElementById("pairs").innerText = pairs;
-
-    }
+moves++;
+document.getElementById("moves").innerText = moves;
 
 
-  }
-
+}
     
 
 
