@@ -222,13 +222,13 @@ function selectCard() {
 function update(){
 
 if(cardOne.src === cardTwo.src){
-  console.log('cards match');
+  
   pairs++;
   document.getElementById("pairs").innerText = pairs;
   cardOne.removeEventListener("click", selectCard);
   cardTwo.removeEventListener("click", selectCard);
 } else{
-  console.log('Cards do not match');
+  
   cardOne.src = 'assets/images/fruitmcover.jpg';
   cardTwo.src = 'assets/images/fruitmcover.jpg';
 }
@@ -245,8 +245,6 @@ document.getElementById("moves").innerText = moves;
 
 
 // New game/restart game function - using page refresh
-
-https://teamtreehouse.com/community/any-one-know-how-to-make-a-restart-button
 
 
 function newGame (){
