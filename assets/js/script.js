@@ -19,9 +19,6 @@ var cardTwo;
 
 let startMe=false;
 
-let endTime = "";
-
-const timerContainer = document.querySelector(".timer");
 
 // How to Play Pop-up Modal adapted using https://www.w3schools.com/howto/howto_css_modals.asp */
 
@@ -152,7 +149,7 @@ var seconds = 0;
 var minutes = 0;
 
 function startTimer() {
-  timer = setInterval(updateTimer, 1000); // Update the timer every second
+  timer = setInterval(updateTimer, 1000);
 }
 
 function updateTimer() {
@@ -170,6 +167,7 @@ function updateTimer() {
 function endTimer(){
 
   clearInterval(timer);
+  
 }
 
 // Function to track when the user clicks on two cards to flip them over. 
@@ -233,7 +231,7 @@ if(cardOne.src === cardTwo.src){
 
 cardOne = null;
 cardTwo = null;
-// Moves counter track number of times 2 cards are turned over to find a match
+// Moves counter to track number of time when 2 cards are turned over to find a match
 moves++;
 document.getElementById("moves").innerText = moves;
 
@@ -241,6 +239,7 @@ document.getElementById("moves").innerText = moves;
 
 if(pairs === 8){
   endGame();
+  
 
 }
 }
@@ -249,19 +248,25 @@ if(pairs === 8){
 
 function endGame(){
 
-  endTimer();
+  endTimer(); 
   winMsg();
+  
 
 }
 
 function winMsg(){
+
 winmodal.style.display = "block";
 document.getElementById("endMoves").innerHTML = moves;
-document.getElementsByClassName("endTime").innerHTML = time;
+var endTime = document.querySelector(".timer").textContent;
+document.getElementById("endTime").innerText = endTime;
+
+console.log(endTime);
 
 
-}
 
+
+};
 // Win message pop-up modal
 
 
