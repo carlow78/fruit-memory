@@ -1,7 +1,5 @@
 // ** setting our function variable for the game
 
-
-
 var moves = 0;
 
 var pairs = 0;
@@ -21,35 +19,31 @@ var cardTwo;
 
 let startMe=false;
 
+let endTime = "";
+
+const timerContainer = document.querySelector(".timer");
+
 // How to Play Pop-up Modal adapted using https://www.w3schools.com/howto/howto_css_modals.asp */
 
 
 // Get the modal element
-var modal = document.getElementById("play-modal");
+var playmodal = document.getElementById("play-modal");
 
 // How to Play button to launch popup modal
 var btn = document.getElementById("howToPlay");
 
 // Close button
-var span = document.getElementsByClassName("close")[0];
+var playspan = document.getElementsByClassName("playclose")[0];
 
 // When the user clicks on the button, open the modal
 btn.onclick = function() {
-  modal.style.display = "block";
+  playmodal.style.display = "block";
 };
 
 // Close button function
-span.onclick = function() {
-  modal.style.display = "none";
+playspan.onclick = function() {
+  playmodal.style.display = "none";
 };
-
-// Closes pop-up when user clicks outside
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-};
-
 
 
 /* Card game functioning adapted following along with online tutorial 
@@ -101,7 +95,6 @@ Starting with the first (1) square on screen down to the last (16).
 
 */
 
-
 function startGame()   {
  
 
@@ -152,10 +145,9 @@ function hideCards (){
 }
 
 
-/* Timer Function - https://stackoverflow.com/questions/55031097/how-do-i-start-a-timer-on-a-click#:~:text=the%20most%20basic%20way%20to,('%23button').
+// Timer Function - https://stackoverflow.com/questions/55031097/how-do-i-start-a-timer-on-a-click#:~:text=the%20most%20basic%20way%20to,('%23button').
 
-/* JavaScript */
-var timer; // This variable will hold the interval function
+var timer; // Variable to hold timer interval
 var seconds = 0;
 var minutes = 0;
 
@@ -169,8 +161,15 @@ function updateTimer() {
     seconds = 0;
     minutes++;
   }
+
+  // Timer logic to ensure 2 digits for seconds are shown - ie 01 seconds instead 1 seconds
   var time = (minutes < 10 ? "0" + minutes : minutes) + ":" + (seconds < 10 ? "0" + seconds : seconds);
   document.querySelector(".timer").textContent = time;
+}
+
+function endTimer(){
+
+  clearInterval(timer);
 }
 
 // Function to track when the user clicks on two cards to flip them over. 
@@ -210,39 +209,82 @@ function selectCard() {
             //clearInterval(startTimer);
 
         }
-
         
       }
 
         }
  
 
-// If function to check if the two cards selected are the same if they are they remaining showing if not they return to face down state. Till matched.
+// If function to check if the two cards selected are the same if they are remain showing if not they return to face down state. Till matched.
 
 function update(){
 
 if(cardOne.src === cardTwo.src){
   
-  pairs++;
+  pairs++; // Increase pair counter for each match made
   document.getElementById("pairs").innerText = pairs;
   cardOne.removeEventListener("click", selectCard);
   cardTwo.removeEventListener("click", selectCard);
 } else{
-  
+  // If no match return cards to face down state
   cardOne.src = 'assets/images/fruitmcover.jpg';
   cardTwo.src = 'assets/images/fruitmcover.jpg';
 }
 
 cardOne = null;
 cardTwo = null;
-
+// Moves counter track number of times 2 cards are turned over to find a match
 moves++;
 document.getElementById("moves").innerText = moves;
 
+// When the player matches all 8 cards they complete the game.
+
+if(pairs === 8){
+  endGame();
 
 }
-    
+}
 
+// End Game logic adapted using https://moirahartigan.github.io/Portfolio-2---Alien-Memory-Game/ 
+
+function endGame(){
+
+  endTimer();
+  winMsg();
+
+}
+
+function winMsg(){
+winmodal.style.display = "block";
+document.getElementById("endMoves").innerHTML = moves;
+document.getElementsByClassName("endTime").innerHTML = time;
+
+
+}
+
+// Win message pop-up modal
+
+
+  // Get the modal element
+  var winmodal = document.getElementById("win-modal");
+ 
+  
+  // Close button
+  var winspan = document.getElementsByClassName("winclose")[0];
+  
+  
+  // Close button function
+  winspan.onclick = function() {
+    winmodal.style.display = "none";
+  };
+  
+  // Closes pop-up when user clicks outside
+  window.onclick = function(event) {
+    if (event.target == winmodal) {
+      winmodal.style.display = "none";
+    }
+  
+  };
 
 // New game/restart game function - using page refresh
 
