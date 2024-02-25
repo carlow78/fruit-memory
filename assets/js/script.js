@@ -1,29 +1,30 @@
 // ** setting our function variable for the game
 
-var moves = 0;
+var moves = 0; // counter for number times 2 cards are turned
 
-var pairs = 0;
+var pairs = 0; // counter for when player matches a pair.
 
 var cardFruits = ["apple", "banana", "blueberry", "lemon", "mandarin", "mango", "orange", "strawberry"]; // Our fruit objects the player needs to match
 
-var cardList; // Our Deck of cards
+var cardList; // List for our above deck of cards
 
 var canvas = []; // our game canvas
 
-var rows = 4; 
+var rows = 4; // our number of rows
 
-var columns = 4;
+var columns = 4; // our number of columns
 
-var cardOne;
-var cardTwo;
+var cardOne; // variable for the first card turned
+var cardTwo; // variable for second card
 
-let startMe=false;
+let startMe = false; // Game start variable
 
 
 // How to Play Pop-up Modal adapted using https://www.w3schools.com/howto/howto_css_modals.asp */
 
 
 // Get the modal element
+
 var playmodal = document.getElementById("play-modal");
 
 // How to Play button to launch popup modal
@@ -33,12 +34,12 @@ var btn = document.getElementById("howToPlay");
 var playspan = document.getElementsByClassName("playclose")[0];
 
 // When the user clicks on the button, open the modal
-btn.onclick = function() {
+btn.onclick = function () {
   playmodal.style.display = "block";
 };
 
 // Close button function
-playspan.onclick = function() {
+playspan.onclick = function () {
   playmodal.style.display = "none";
 };
 
@@ -50,38 +51,38 @@ https://www.youtube.com/watch?v=wz9jeI9M9hI
 
 // Shuffle cards function
 
-window.onload = function() {
-    shuffleCards();
-    startGame();
+window.onload = function () {
+  shuffleCards();
+  startGame();
 
 };
 
-// Shuffling cards function using math floor and random.
+// Shuffling cards function using math floor and random functions.
 
-function shuffleCards (){
+function shuffleCards() {
 
-// Concatenate cards so we have 2 of them
+  // Concatenate cards so we have 2 of them
 
-cardList = cardFruits.concat(cardFruits);
+  cardList = cardFruits.concat(cardFruits);
 
-// Shuffle the cards
+  // Shuffle the cards
 
 
-for (let x = 0;  x <  cardList.length; x++){
+  for (let x = 0; x < cardList.length; x++) {
 
     let y = Math.floor(Math.random() * cardList.length); //Gets a random index
 
 
 
-// randomize cards
+    // randomize cards
 
-let tmp = cardList[x];
-cardList[x] = cardList[y];
-cardList[y]= tmp;
+    let tmp = cardList[x];
+    cardList[x] = cardList[y];
+    cardList[y] = tmp;
 
-console.log(cardList);
+    console.log(cardList);
 
-}
+  }
 
 }
 
@@ -92,53 +93,53 @@ Starting with the first (1) square on screen down to the last (16).
 
 */
 
-function startGame()   {
- 
+function startGame() {
 
-    // r for rows, c for columns
-    for (let r = 0; r < rows; r++) {
-        let row = [];
-        for (let c = 0;  c < columns; c++){
-            let cardImage = cardList.pop();
-            row.push(cardImage); //JavaScript
-            let card = document.createElement("img"); // HTML 
-            card.id = r.toString() + "-" + c.toString();
-            card.src =  "assets/images/" + cardImage + ".jpg"; 
-            card.classList.add("card");
-            // Listener click event for when the user clicks on the card. 
-            
-            card.addEventListener("click", selectCard);
-            document.getElementById("canvas").append(card);
 
-        }
+  // r for rows, c for columns
+  for (let r = 0; r < rows; r++) {
+    let row = [];
+    for (let c = 0; c < columns; c++) {
+      let cardImage = cardList.pop();
+      row.push(cardImage); //JavaScript
+      let card = document.createElement("img"); // HTML 
+      card.id = r.toString() + "-" + c.toString();
+      card.src = "assets/images/" + cardImage + ".jpg";
+      card.classList.add("card");
+      // Listener click event for when the user clicks on the card. 
 
-        // Push the cards to the screen
-        canvas.push(row);
-    
+      card.addEventListener("click", selectCard);
+      document.getElementById("canvas").append(card);
 
-}
+    }
 
-// Print cards to screen.
-console.log(canvas);
+    // Push the cards to the screen
+    canvas.push(row);
 
-// Hide the cards so user can't see them till they are matched.
 
-setTimeout(hideCards);
+  }
+
+  // Print cards to screen.
+  console.log(canvas);
+
+  // Hide the cards so user can't see them till they are matched.
+
+  setTimeout(hideCards);
 
 }
 
 // Function to hide the cards showing them face down image (fruitmcover).
 
-function hideCards (){
+function hideCards() {
 
-    for (let r = 0; r < rows; r++) {
-        let row = [];
-        for (let c = 0;  c < columns; c++){
-            let card = document.getElementById(r.toString() + "-" + c.toString());
-            card.src = `assets/images/fruitmcover.jpg`;
+  for (let r = 0; r < rows; r++) {
+    let row = [];
+    for (let c = 0; c < columns; c++) {
+      let card = document.getElementById(r.toString() + "-" + c.toString());
+      card.src = `assets/images/fruitmcover.jpg`;
 
-}
     }
+  }
 }
 
 
@@ -149,119 +150,130 @@ var seconds = 0;
 var minutes = 0;
 
 function startTimer() {
-  timer = setInterval(updateTimer, 1000);
+
+  timer = setInterval(updateTimer, 1000); // Updates timer every second
 }
 
+// When the timer reaches 60 seconds our minutes variable is increased by 1 and seconds variable returns to 0 
+
 function updateTimer() {
+
   seconds++;
+
   if (seconds == 60) {
     seconds = 0;
     minutes++;
   }
 
-  // Timer logic to ensure 2 digits for seconds are shown - ie 01 seconds instead 1 seconds
+  /*
+  Timer logic using tenary operators to check if the value of minutes or seconds are
+   less than 10 if they are 0 is placed in front so they maintain a 2 digit format  - ie 01 seconds instead 1 seconds.
+   */
+
   var time = (minutes < 10 ? "0" + minutes : minutes) + ":" + (seconds < 10 ? "0" + seconds : seconds);
+
   document.querySelector(".timer").textContent = time;
 }
 
-function endTimer(){
+function endTimer() {
 
   clearInterval(timer);
-  
+
 }
 
 // Function to track when the user clicks on two cards to flip them over. 
 
 function selectCard() {
 
-  if(this.src.includes("fruitmcover")) {
-       
-      if(!cardOne ){
-            cardOne = this; 
-            
-            
-            let coord = cardOne.id.split("-");
-            let r = parseInt(coord[0]);
-            let c = parseInt(coord[1]);
-            
-            cardOne.src = "assets/images/" + canvas[r][c]  + ".jpg"; 
-            
-      }
+  if (this.src.includes("fruitmcover")) {
 
-      if (!startMe) {
+    if (!cardOne) {
+      cardOne = this;
 
-        startMe=true;
-        startTimer();
-    
-      }
-  
-        else if (!cardTwo && this != cardOne){
-            cardTwo = this;
-            
-            let coord = cardTwo.id.split("-");
-            let r = parseInt(coord[0]);
-            let c = parseInt(coord[1]);
 
-            cardTwo.src = "assets/images/" + canvas[r][c]  + ".jpg";      
-            setTimeout(update, 1000);
-            //clearInterval(startTimer);
+      let coord = cardOne.id.split("-");
+      let r = parseInt(coord[0]);
+      let c = parseInt(coord[1]);
 
-        }
-        
-      }
+      cardOne.src = "assets/images/" + canvas[r][c] + ".jpg";
 
-        }
- 
+    }
+
+    if (!startMe) {
+
+      startMe = true;
+      startTimer();
+
+    } else if (!cardTwo && this != cardOne) {
+      cardTwo = this;
+
+      let coord = cardTwo.id.split("-");
+      let r = parseInt(coord[0]);
+      let c = parseInt(coord[1]);
+
+      cardTwo.src = "assets/images/" + canvas[r][c] + ".jpg";
+      setTimeout(update, 1000);
+      //clearInterval(startTimer);
+
+    }
+
+  }
+
+}
+
 
 // If function to check if the two cards selected are the same if they are remain showing if not they return to face down state. Till matched.
 
-function update(){
+function update() {
 
-if(cardOne.src === cardTwo.src){
-  
-  pairs++; // Increase pair counter for each match made
-  document.getElementById("pairs").innerText = pairs;
-  cardOne.removeEventListener("click", selectCard);
-  cardTwo.removeEventListener("click", selectCard);
-} else{
-  // If no match return cards to face down state
-  cardOne.src = 'assets/images/fruitmcover.jpg';
-  cardTwo.src = 'assets/images/fruitmcover.jpg';
-}
+  if (cardOne.src === cardTwo.src) {
 
-cardOne = null;
-cardTwo = null;
-// Moves counter to track number of time when 2 cards are turned over to find a match
-moves++;
-document.getElementById("moves").innerText = moves;
+    pairs++; // Increase pair counter for each match made
 
-// When the player matches all 8 cards they complete the game.
+    document.getElementById("pairs").innerText = pairs;
+    cardOne.removeEventListener("click", selectCard);
+    cardTwo.removeEventListener("click", selectCard);
 
-if(pairs === 8){
-  endGame();
-  
+  } else {
+    // If no match return cards to face down state
+    cardOne.src = 'assets/images/fruitmcover.jpg';
+    cardTwo.src = 'assets/images/fruitmcover.jpg';
+  }
 
-}
+  cardOne = null;
+  cardTwo = null;
+
+  // Moves counter to track number of time when 2 cards are turned over to find a match
+
+  moves++; // increase moves counter
+  document.getElementById("moves").innerText = moves;
+
+  // When the player matches all 8 cards they complete the game.
+
+  if (pairs === 8) {
+
+    endGame();
+
+
+  }
 }
 
 // End Game logic adapted using https://moirahartigan.github.io/Portfolio-2---Alien-Memory-Game/ 
 
-function endGame(){
+function endGame() {
 
-  endTimer(); 
+  endTimer();
   winMsg();
-  
+
 
 }
 
-function winMsg(){
+function winMsg() {
 
-winmodal.style.display = "block";
-document.getElementById("endMoves").innerHTML = moves;
-var endTime = document.querySelector(".timer").textContent;
-document.getElementById("endTime").innerText = endTime;
-
-console.log(endTime);
+  winmodal.style.display = "block";
+  document.getElementById("endMoves").innerHTML = moves;
+  var endTime = document.querySelector(".timer").textContent;
+  document.getElementById("endTime").innerText = endTime;
 
 
 
@@ -270,33 +282,33 @@ console.log(endTime);
 // Win message pop-up modal
 
 
-  // Get the modal element
-  var winmodal = document.getElementById("win-modal");
- 
-  
-  // Close button
-  var winspan = document.getElementsByClassName("winclose")[0];
-  
-  
-  // Close button function
-  winspan.onclick = function() {
+// Get the modal element
+var winmodal = document.getElementById("win-modal");
+
+
+// Close button
+var winspan = document.getElementsByClassName("winclose")[0];
+
+
+// Close button function
+winspan.onclick = function () {
+  winmodal.style.display = "none";
+};
+
+// Closes pop-up when user clicks outside
+window.onclick = function (event) {
+  if (event.target == winmodal) {
     winmodal.style.display = "none";
-  };
-  
-  // Closes pop-up when user clicks outside
-  window.onclick = function(event) {
-    if (event.target == winmodal) {
-      winmodal.style.display = "none";
-    }
-  
-  };
+  }
+
+};
 
 // New game/restart game function - using page refresh
 
 
-function newGame (){
+function newGame() {
 
-    window.location.reload();
+  window.location.reload();
 
 
 }

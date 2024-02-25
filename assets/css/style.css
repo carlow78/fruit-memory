@@ -1,15 +1,59 @@
+/* Google fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Notable&display=swap');
+
+*{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+}
+
 body{
 
 
-    /* Background courtesy of https://as1.ftcdn.net/v2/jpg/02/32/62/10/1000_F_232621016_guMHJbCXn90eseySbB3vbmeCsaSzVjs1.jpg - swapped colors using GIMP. */
+    /* Background courtesy of https://as1.ftcdn.net/v2/jpg/02/32/62/10/1000_F_232621016_guMHJbCXn90eseySbB3vbmeCsaSzVjs1.jpg - swapped colors using GIMP graphic editor. */
 
     background: url("../../assets/images/fruitbackground.jpg");
     background-size: cover;
 
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Notable", sans-serif;
     text-align: center;
     
 }
+
+/* Styling for header content Game Title, Moves, Pairs */
+
+h1,h2,h3{
+  font-family: "Didact Gothic", sans-serif;
+  color: darkblue;
+  text-shadow: 3px 3px lightgray;
+
+}
+
+/* Styling for our timer */
+
+span{
+
+  color: darkblue;
+  font-size: xx-large;
+  text-shadow: 3px 3px lightgray;
+
+
+}
+
+/* Styling for 2 buttons New Game and How to Play */
+
+button {
+
+  color: darkblue;
+  font-family: "Notable", sans-serif;
+  
+  background-color: aquamarine;
+  font-size: large;
+  padding: 4px 4px;
+
+}
+
+
 
 
 /* How to play modal adapted based on https://www.w3schools.com/howto/howto_css_modals.asp */
@@ -23,7 +67,6 @@ body{
     top: 0;
     width: 100%; /* Full width */
     height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
   }
@@ -33,7 +76,8 @@ body{
     background-color: #fefefe;
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
-    border: 1px solid #888;
+    border: 2px solid #888;
+    font: 1em sans-serif;
     width: 80%; /* Could be more or less, depending on screen size */
   }
   
@@ -56,16 +100,15 @@ body{
 
 /* /* The Modal (background) */
 .winmodal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  display: none; /* hide modal by default */
+  position: fixed; 
+  z-index: 1;
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  width: 100%; 
+  height: 100%; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
 }
 
 /* Modal Content/Box */
@@ -109,8 +152,65 @@ border: 5px solid turquoise;
 .card{
 
     height: 55px;
-    width: 58px;
+    width: 55px;
     margin: 2.5px;
+
+}
+
+
+/* --- MEDIA QUERIES FOR LARGER SCREEN TYPES ---- */
+
+/* Small devices (portrait tablets and large phones) */
+
+@media only screen and (min-width: 600px){
+
+
+  #canvas{
+
+    height: 700px;
+    width: 400px;
+    
+    }
+    
+    .card{
+    
+        height: 85px;
+        width: 85px;
+        margin: 5px;
+    
+    }
+
+    button {
+
+      font-size: x-large;
+
+
+    }
+
+}
+
+/* X-large devices (monitors) */
+
+@media only screen and (min-width: 1200px){
+
+  
+
+  #canvas{
+
+    height: 700px;
+    width: 1000px;
+    
+    }
+
+    .card{
+    
+      height: 150px;
+        width: 225px;
+        margin: 10px;
+  
+  }
+  
+
 
 }
 

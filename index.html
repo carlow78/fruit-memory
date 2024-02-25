@@ -4,29 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
-    
 
     <title>Fruit Memory</title>
 
+    <!--Favicon created with https://favicon.io/favicon-converter/ -->
+
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+  
 </head>
 
 <body>
 
     <h1>Fruit Memory</h1>
-
+    <br>
     <span class ="timer">0:00</span>
-
+    <br>
     <h2>Moves: <span id="moves">0</span></h2>
-
+    <br>
     <h2>Pairs: <span id="pairs">0</span> of 8</h2>
+    <br>
+    
 
     <div id="canvas"></div>
 
     <br>
 
     <button onclick="newGame()">New Game</button>
-
+  
     <!-- Trigger/Open The Modal -->
+    <br>
+    <br>
 <button id="howToPlay">How to Play</button>
 
 <!-- The Modal -->
@@ -36,11 +45,16 @@
   <div class="play-content">
     <span class="playclose">&times;</span>
     <h2>Rules of the Game</h2>
+    <br>
     <ol>
         <li> To Start the game click on 1 card to turn it over.</li>
-        <li>Flip another card, if it matches. Well done you have found a pair.</li>
-        <li>If not both cards will be flipped back over till you find a matching pair.</li>
-        <li>There are 8 fruit cards to match to complete the game.</li>   
+        <br>
+        <li>Click on another card, if it matches. Well done you have found a pair.</li>
+        <br>
+        <li>If not both cards will be turned back over till you find a matching pair.</li>
+        <br>
+        <li>There are 8 fruit cards to match to complete the game.</li> 
+        <br>  
         <li>Try to beat your quickest time or least amount of moves.</li>
         <br>
         <strong>Good Luck and enjoy!</strong>
