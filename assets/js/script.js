@@ -1,21 +1,23 @@
+// jshint esversion: 8
+
 // ** setting our function variable for the game
 
-var moves = 0; // counter for number times 2 cards are turned
+let moves = 0; // counter for number times 2 cards are turned
 
-var pairs = 0; // counter for when player matches a pair.
+ let pairs = 0; // counter for when player matches a pair.
 
-var cardFruits = ["apple", "banana", "blueberry", "lemon", "mandarin", "mango", "orange", "strawberry"]; // Our fruit objects the player needs to match
+const cardFruits = ["apple", "banana", "blueberry", "lemon", "mandarin", "mango", "orange", "strawberry"]; // Our fruit objects the player needs to match
 
-var cardList; // List for our above deck of cards
+let cardList; // List for our above deck of cards
 
-var canvas = []; // our game canvas
+let canvas = []; // our game canvas
 
-var rows = 4; // our number of rows
+let rows = 4; // our number of rows
 
-var columns = 4; // our number of columns
+let columns = 4; // our number of columns
 
-var cardOne; // variable for the first card turned
-var cardTwo; // variable for second card
+let cardOne; // variable for the first card turned
+let cardTwo; // variable for second card
 
 let startMe = false; // Game start variable
 
@@ -44,7 +46,8 @@ playspan.onclick = function () {
 };
 
 
-/* Card game functioning adapted following along with online tutorial 
+/* 
+Card game functioning adapted following along with online tutorial 
 https://www.youtube.com/watch?v=wz9jeI9M9hI
 */
 
@@ -71,8 +74,6 @@ function shuffleCards() {
   for (let x = 0; x < cardList.length; x++) {
 
     let y = Math.floor(Math.random() * cardList.length); //Gets a random index
-
-
 
     // randomize cards
 
@@ -101,7 +102,7 @@ function startGame() {
     let row = [];
     for (let c = 0; c < columns; c++) {
       let cardImage = cardList.pop();
-      row.push(cardImage); //JavaScript
+      row.push(cardImage); 
       let card = document.createElement("img"); // HTML 
       card.id = r.toString() + "-" + c.toString();
       card.src = "assets/images/" + cardImage + ".jpg";
@@ -115,7 +116,6 @@ function startGame() {
 
     // Push the cards to the screen
     canvas.push(row);
-
 
   }
 
@@ -133,7 +133,7 @@ function startGame() {
 function hideCards() {
 
   for (let r = 0; r < rows; r++) {
-    let row = [];
+    //let row = [];
     for (let c = 0; c < columns; c++) {
       let card = document.getElementById(r.toString() + "-" + c.toString());
       card.src = `assets/images/fruitmcover.jpg`;
@@ -154,7 +154,7 @@ function startTimer() {
   timer = setInterval(updateTimer, 1000); // Updates timer every second
 }
 
-// When the timer reaches 60 seconds our minutes variable is increased by 1 and seconds variable returns to 0 
+// When the timer reaches 60 seconds our minutes variable is increased by 1 and seconds variable returns to 00 
 
 function updateTimer() {
 
@@ -221,7 +221,6 @@ function selectCard() {
 
 }
 
-
 // If function to check if the two cards selected are the same if they are remain showing if not they return to face down state. Till matched.
 
 function update() {
@@ -235,6 +234,7 @@ function update() {
     cardTwo.removeEventListener("click", selectCard);
 
   } else {
+
     // If no match return cards to face down state
     cardOne.src = 'assets/images/fruitmcover.jpg';
     cardTwo.src = 'assets/images/fruitmcover.jpg';
@@ -275,10 +275,8 @@ function winMsg() {
   var endTime = document.querySelector(".timer").textContent;
   document.getElementById("endTime").innerText = endTime;
 
+}
 
-
-
-};
 // Win message pop-up modal
 
 
@@ -308,7 +306,17 @@ window.onclick = function (event) {
 
 function newGame() {
 
-  window.location.reload();
+  //window.location.reload();
+  startMe = false;
+  timer=0;
+  seconds=0;
+  minutes=0;
+  moves=0;
+  pairs=0;
+  cardOne=[null];
+  cardTwo=[null];
+
+
 
 
 }

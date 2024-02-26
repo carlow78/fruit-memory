@@ -34,7 +34,6 @@ h1,h2,h3{
 span{
 
   color: darkblue;
-  font-size: xx-large;
   text-shadow: 3px 3px lightgray;
 
 
@@ -46,11 +45,8 @@ button {
 
   color: darkblue;
   font-family: "Notable", sans-serif;
-  
   background-color: aquamarine;
-  font-size: large;
-  padding: 4px 4px;
-
+ 
 }
 
 
@@ -137,8 +133,8 @@ button {
 
 #canvas{
 
-height: 280px;
-width: 255px;
+height: 200px;
+width: 200px;
 margin:  auto;
 /* Flexbox styling for card animation*/
 display: flex;
@@ -151,8 +147,8 @@ border: 5px solid turquoise;
 
 .card{
 
-    height: 55px;
-    width: 55px;
+    height: 40px;
+    width: 42px;
     margin: 2.5px;
 
 }
@@ -189,28 +185,27 @@ border: 5px solid turquoise;
 
 }
 
+
 /* X-large devices (monitors) */
 
 @media only screen and (min-width: 1200px){
 
-  
 
   #canvas{
 
-    height: 600px;
-    width: 1000px;
+    height: 500px;
+    width: 900px;
     
     }
 
     .card{
     
-      height: 120px;
-        width: 225px;
-        margin: 10px;
+      height: 110px;
+        width: 210px;
+        margin: 5px;
   
   }
   
-
 
 }
 
