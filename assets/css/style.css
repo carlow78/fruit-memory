@@ -195,27 +195,6 @@ border: 5px solid turquoise;
 
 }
 
-/* Media query for laptop screens */
-
-@media only screen and (min-width: 780px){
-
-  #canvas{
-
-    height: 800px;
-    width: 770px;
-    
-    }
-    
-    .card{
-    
-        height: 185px;
-        width: 183px;
-        margin: 3px;
-    
-    }
-
-
-}
 
 
 /* X-large devices (monitors) */

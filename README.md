@@ -1,12 +1,12 @@
-# **_Nero's Pizza_**
+# **_Fruit Memory**
 
-Nero's Pizza is a small recently opened (fictional) pizzeria based in Oranmore, Galway, Ireland. The site is in its infancy as is targeted at people around the area (and beyond) to learn more about the new business.
+Is a memory card game designed to improve short-term memory and exercise the brain. Its a game that can be enjoyed by young and old.
 
-The site was designed using the mobile first development model with additional media queries for devices with larger screens.
+The game was designed using the mobile first development model with additional media queries for devices with larger screens.
 
 <i>Why Mobile First?</i> Over half of website traffic comes from mobile devices and over 90% of internet users access the internet using a mobile phone. <a href="https://explodingtopics.com/blog/mobile-internet-traffic" target="_blank" rel="noopener">Source</a>
 
-View the Live Website - <a href="https://carlow78.github.io/nerospizza/index.html" target="_blank" rel="noopener">Nero's Pizza</a>
+View the Live Game here - <a href="https://carlow78.github.io/fruit-memory/" target="_blank" rel="noopener">Fruit Memory</a>
 
 
 The below screenshot shows what the site looks like in various screensizes.
