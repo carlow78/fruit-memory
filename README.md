@@ -9,9 +9,9 @@ The game was designed using the mobile first development model with additional m
 View the Live Game here - <a href="https://carlow78.github.io/fruit-memory/" target="_blank" rel="noopener">Fruit Memory</a>
 
 
-The below screenshot shows what the site looks like in various screensizes.
+The below screenshot shows what the game looks like in various screensizes.
 
-![Am I responsive images](assets/images/am-responsive.png)
+![Am I responsive images](assets/readme/amiresponsive.png)
 
 # Contents
 
