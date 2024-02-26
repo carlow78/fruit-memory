@@ -167,7 +167,7 @@ border: 5px solid turquoise;
 
   #canvas{
 
-    height: 700px;
+    height: 500px;
     width: 400px;
     
     }
@@ -197,14 +197,14 @@ border: 5px solid turquoise;
 
   #canvas{
 
-    height: 700px;
+    height: 600px;
     width: 1000px;
     
     }
 
     .card{
     
-      height: 150px;
+      height: 120px;
         width: 225px;
         margin: 10px;
   
