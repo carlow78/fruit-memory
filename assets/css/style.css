@@ -199,19 +199,17 @@ border: 5px solid turquoise;
 
 @media only screen and (min-width: 780px){
 
-
-
   #canvas{
 
-    height: 1000px;
-    width: 760px;
+    height: 800px;
+    width: 770px;
     
     }
     
     .card{
     
         height: 185px;
-        width: 138px;
+        width: 183px;
         margin: 3px;
     
     }
@@ -227,16 +225,16 @@ border: 5px solid turquoise;
 
   #canvas{
 
-    height: 800px;
-    width: 1600px;
+    height: 750px;
+    width: 1100px;
     
     }
 
     .card{
     
-      height: 190px;
-        width: 388px;
-        margin: 4px;
+      height: 180px;
+        width: 265px;
+  
   
   }
 
