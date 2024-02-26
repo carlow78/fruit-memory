@@ -1,4 +1,4 @@
-# **_Fruit Memory**
+# **Fruit Memory**
 
 Is a memory card game designed to improve short-term memory and exercise the brain. Its a game that can be enjoyed by young and old.
 
