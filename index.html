@@ -18,23 +18,18 @@
 <body>
 
     <h1>Fruit Memory</h1>
-    <br>
-    <span class ="timer">0:00</span>
-    <br>
-    <h2>Moves: <span id="moves">0</span></h2>
-    <br>
-    <h2>Pairs: <span id="pairs">0</span> of 8</h2>
-    <br>
     
-
+    <span class ="timer">0:00</span>
+    
+    <h2>Moves: <span id="moves">0</span></h2>
+    
+    <h2>Pairs: <span id="pairs">0</span> of 8</h2>
+    
     <div id="canvas"></div>
 
-    <br>
-
-    <button onclick="newGame()">New Game</button>
+    <button id="btnNewGame" type="button">New Game</button>
   
     <!-- Trigger/Open The Modal -->
-    <br>
     <br>
 <button id="howToPlay">How to Play</button>
 
@@ -48,17 +43,17 @@
     <br>
     <ol>
         <li> To Start the game click on 1 card to turn it over.</li>
-        <br>
+        
         <li>Click on another card, if it matches. Well done you have found a pair.</li>
-        <br>
+        
         <li>If not both cards will be turned back over till you find a matching pair.</li>
-        <br>
+        
         <li>There are 8 fruit cards to match to complete the game.</li> 
-        <br>  
+        
         <li>Try to beat your quickest time or least amount of moves.</li>
-        <br>
+      </ol>   
         <strong>Good Luck and enjoy!</strong>
-    </ol>
+    
   </div>
 
 </div>
@@ -71,7 +66,6 @@
   <p>You have found all 8 pairs.
     <p>You made <span id="endMoves"></span> moves
     and completed the game in <span id="endTime"></span>.</p>
-  </p>
 
 </div>
 

@@ -81,8 +81,6 @@ function shuffleCards() {
     cardList[x] = cardList[y];
     cardList[y] = tmp;
 
-    console.log(cardList);
-
   }
 
 }
@@ -118,9 +116,6 @@ function startGame() {
     canvas.push(row);
 
   }
-
-  // Print cards to screen.
-  console.log(canvas);
 
   // Hide the cards so user can't see them till they are matched.
 
@@ -301,22 +296,13 @@ window.onclick = function (event) {
 
 };
 
-// New game/restart game function - using page refresh
+const newGameBtn = document.getElementById("btnNewGame");
 
-
-function newGame() {
-
-  //window.location.reload();
-  startMe = false;
-  timer=0;
-  seconds=0;
-  minutes=0;
-  moves=0;
-  pairs=0;
-  cardOne=[null];
-  cardTwo=[null];
-
-
-
-
+function handleClick() {
+  window.location.reload();
 }
+
+newGameBtn.addEventListener("click", handleClick);
+  
+
+      
