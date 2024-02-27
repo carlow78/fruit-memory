@@ -1,28 +1,30 @@
 /* Google fonts import */
-@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Notable&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
 
-*{
-  padding:0;
-  margin:0;
+* {
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 
-body{
+body {
 
 
-    /* Background courtesy of https://as1.ftcdn.net/v2/jpg/02/32/62/10/1000_F_232621016_guMHJbCXn90eseySbB3vbmeCsaSzVjs1.jpg - swapped colors using GIMP graphic editor. */
+  /* Background courtesy of https://as1.ftcdn.net/v2/jpg/02/32/62/10/1000_F_232621016_guMHJbCXn90eseySbB3vbmeCsaSzVjs1.jpg - swapped colors using GIMP graphic editor. */
 
-    background: url("../../assets/images/fruitbackground.jpg");
-    background-size: cover;
+  background: url("../../assets/images/fruitbackground.jpg");
+  background-size: cover;
 
-    font-family: "Notable", sans-serif;
-    text-align: center;
-    
+  font-family: "Notable", sans-serif;
+  text-align: center;
+
 }
 
 /* Styling for header content Game Title, Moves, Pairs */
 
-h1,h2,h3{
+h1,
+h2,
+h3 {
   font-family: "Didact Gothic", sans-serif;
   color: darkblue;
   text-shadow: 3px 3px lightgray;
@@ -31,7 +33,7 @@ h1,h2,h3{
 
 /* Styling for our timer */
 
-span{
+span {
 
   font-family: "Didact Gothic", sans-serif;
   font-size: larger;
@@ -49,7 +51,7 @@ button {
   font-family: "Didact Gothic", sans-serif;
   background-color: aquamarine;
   box-shadow: 3px 3px lightgray;
- 
+
 }
 
 
@@ -59,65 +61,73 @@ button {
 
 /* The Modal (background) */
 .playmodal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Show on top */
-    left: 0;
-    top: 0;
-    width: 100%; 
-    height: 100%;
-    background-color: rgb(0,0,0); 
-    background-color: rgba(0,0,0,0.4); 
-  }
-  
-  /* Modal Content/Box */
-  .play-content {
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 2px solid #888;
-    font: 1em sans-serif;
-    width: 80%; /* Could be more or less, depending on screen size */
-  }
-  
-  /* The Close Button */
-  .playclose {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-  
-  .playclose:hover,
-  .playclose:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-  }
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Show on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Modal Content/Box */
+.play-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  /* 15% from the top and centered */
+  padding: 20px;
+  border: 2px solid #888;
+  font: 1em sans-serif;
+  width: 80%;
+  /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.playclose {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.playclose:hover,
+.playclose:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
 
 
 
 /* /* The Modal (background) */
 .winmodal {
-  display: none; /* hide modal by default */
-  position: fixed; 
+  display: none;
+  /* hide modal by default */
+  position: fixed;
   z-index: 1;
   left: 0;
   top: 0;
-  width: 100%; 
-  height: 100%; 
-  background-color: rgb(0,0,0); 
-  background-color: rgba(0,0,0,0.4); 
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 /* Modal Content/Box */
 .win-content {
   background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
+  margin: 15% auto;
+  /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
   font: 1em sans-serif;
-  width: 80%; /* Could be more or less, depending on screen size */
+  width: 80%;
+  /* Could be more or less, depending on screen size */
 }
 
 /* The Close Button */
@@ -135,63 +145,62 @@ button {
   cursor: pointer;
 }
 
-#canvas{
+#canvas {
 
-height: 290px;
-width: 290px;
-margin:  auto;
-/* Flexbox styling for card animation*/
-display: flex;
-flex-wrap: wrap;
+  height: 290px;
+  width: 290px;
+  margin: auto;
+  /* Flexbox styling for card animation*/
+  display: flex;
+  flex-wrap: wrap;
 
-background-color: lightcyan;
-border: 5px solid turquoise;
-
-}
-
-.card{
-
-    height: 65px;
-    width: 65px;
-    margin: 2.5px;
+  background-color: lightcyan;
+  border: 5px solid turquoise;
 
 }
 
+.card {
+
+  height: 65px;
+  width: 65px;
+  margin: 2.5px;
+
+}
 
 /* --- MEDIA QUERIES FOR LARGER SCREEN TYPES ---- */
 
 /* Small devices (portrait tablets and large phones) */
 
-@media only screen and (min-width: 600px){
+@media only screen and (min-width: 600px) {
 
 
-  #canvas{
+  #canvas {
 
     height: 800px;
     width: 590px;
-    
-    }
-    
-    .card{
-    
-        height: 185px;
-        width: 138px;
-        margin: 3px;
-    
-    }
 
-    button {
+  }
 
-      font-size: x-large;
+  .card {
+
+    height: 185px;
+    width: 138px;
+    margin: 3px;
+
+  }
+
+  button {
+
+    font-size: x-large;
 
 
-    }
+  }
 
-    span{
+  span {
 
-      font-size: x-large;
+    font-size: x-large;
 
-    }
+  }
 
 }
 
@@ -199,19 +208,19 @@ border: 5px solid turquoise;
 
 @media only screen and (min-width: 1224px) {
 
-  #canvas{
+  #canvas {
 
     height: 600px;
     width: 600px;
-    
-    }
 
-  .card{
-    
-      height: 140px;
-        width: 140px;
-  
-  
+  }
+
+  .card {
+
+    height: 140px;
+    width: 140px;
+
+
   }
 
 }
@@ -219,29 +228,28 @@ border: 5px solid turquoise;
 
 /* X-large devices (monitors) */
 
-@media only screen and (min-width: 1824px){
+@media only screen and (min-width: 1824px) {
 
 
-  #canvas{
+  #canvas {
 
     height: 750px;
     width: 1100px;
-    
-    }
 
-    .card{
-    
-      height: 180px;
-        width: 265px;
-  
-  
   }
 
-  span{
+  .card {
 
-      font-size: xx-large;
+    height: 180px;
+    width: 265px;
+
+
   }
-  
+
+  span {
+
+    font-size: xx-large;
+  }
+
 
 }
-
