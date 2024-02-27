@@ -4,7 +4,7 @@
 
 let moves = 0; // counter for number times 2 cards are turned
 
- let pairs = 0; // counter for when player matches a pair.
+let pairs = 0; // counter for when player matches a pair.
 
 const cardFruits = ["apple", "banana", "blueberry", "lemon", "mandarin", "mango", "orange", "strawberry"]; // Our fruit objects the player needs to match
 
@@ -100,7 +100,7 @@ function startGame() {
     let row = [];
     for (let c = 0; c < columns; c++) {
       let cardImage = cardList.pop();
-      row.push(cardImage); 
+      row.push(cardImage);
       let card = document.createElement("img"); // HTML 
       card.id = r.toString() + "-" + c.toString();
       card.src = "assets/images/" + cardImage + ".jpg";
@@ -274,27 +274,18 @@ function winMsg() {
 
 // Win message pop-up modal
 
-
 // Get the modal element
 var winmodal = document.getElementById("win-modal");
 
-
 // Close button
 var winspan = document.getElementsByClassName("winclose")[0];
-
 
 // Close button function
 winspan.onclick = function () {
   winmodal.style.display = "none";
 };
 
-// Closes pop-up when user clicks outside
-window.onclick = function (event) {
-  if (event.target == winmodal) {
-    winmodal.style.display = "none";
-  }
-
-};
+// New Game button - refreshes the browser to restart the game.
 
 const newGameBtn = document.getElementById("btnNewGame");
 
@@ -303,6 +294,3 @@ function handleClick() {
 }
 
 newGameBtn.addEventListener("click", handleClick);
-  
-
-      

@@ -1,80 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/style.css">
 
-    <title>Fruit Memory</title>
+  <title>Fruit Memory</title>
 
-    <!--Favicon of card deck cover (fruitmcover) created with https://favicon.io/favicon-converter/ -->
+  <!--Favicon of lemon character created with https://favicon.io/favicon-converter/ -->
 
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
-  
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+
 </head>
 
 <body>
 
-    <h1>Fruit Memory</h1>
-    
-    <span class ="timer">0:00</span>
-    
-    <h2>Moves: <span id="moves">0</span></h2>
-    
-    <h2>Pairs: <span id="pairs">0</span> of 8</h2>
-    
-    <div id="canvas"></div>
+  <h1>Fruit Memory</h1>
 
-    <button id="btnNewGame" type="button">New Game</button>
-  
-    <!-- Trigger/Open The Modal -->
-    <br>
-<button id="howToPlay">How to Play</button>
+  <span class="timer">0:00</span>
 
-<!-- The Modal -->
-<div id="play-modal" class="playmodal">
+  <h2>Moves: <span id="moves">0</span></h2>
 
-  <!-- How to Play Modal Pop up box-->
-  <div class="play-content">
-    <span class="playclose">&times;</span>
-    <h2>Rules of the Game</h2>
-    <br>
-    <ol>
+  <h2>Pairs: <span id="pairs">0</span> of 8</h2>
+
+  <div id="canvas"></div>
+
+  <button id="btnNewGame" type="button">New Game</button>
+
+  <!-- Trigger/Open The Modal -->
+  <br>
+  <button id="howToPlay">How to Play</button>
+
+  <!-- The Modal -->
+  <div id="play-modal" class="playmodal">
+
+    <!-- How to Play Modal Pop up box-->
+    <div class="play-content">
+      <span class="playclose">&times;</span>
+      <h2>Rules of the Game</h2>
+      <br>
+      <ol>
         <li> To Start the game click on 1 card to turn it over.</li>
-        
+
         <li>Click on another card, if it matches. Well done you have found a pair.</li>
-        
+
         <li>If not both cards will be turned back over till you find a matching pair.</li>
-        
-        <li>There are 8 fruit cards to match to complete the game.</li> 
-        
+
+        <li>There are 8 fruit cards to match to complete the game.</li>
+
         <li>Try to beat your quickest time or least amount of moves.</li>
-      </ol>   
-        <strong>Good Luck and enjoy!</strong>
-    
+      </ol>
+      <strong>Good Luck and enjoy!</strong>
+
+    </div>
+
   </div>
 
-</div>
+  <div id="win-modal" class="winmodal">
 
-<div id="win-modal" class="winmodal">
+    <div class="win-content">
+      <span class="winclose">&times;</span>
+      <h2>Well done.</h2>
+      <p>You have found all 8 pairs.
+        <p>You made <span id="endMoves"></span> moves
+          and completed the game in <span id="endTime"></span>.</p>
 
-<div class="win-content">
-  <span class="winclose">&times;</span>
-  <h2>Well done.</h2>
-  <p>You have found all 8 pairs.
-    <p>You made <span id="endMoves"></span> moves
-    and completed the game in <span id="endTime"></span>.</p>
+    </div>
+  </div>
 
-</div>
-
-
-
-</div>
-
- <script src="assets/js/script.js"></script>   
-
+  <script src="assets/js/script.js"></script>
 
 </body>
 

@@ -18,8 +18,9 @@ The below screenshot shows what the game looks like in various screensizes.
 * [**User Experience UX**](<#user-experience-ux>)
     *  [User Stories](<#user-stories>)
     * [Wireframes](<#wireframes>)
-    * [Site Structure](<#site-structure>)
     * [Design Choices](<#design-choices>)
+    *  [Game Design](<#game-design>)
+     *  [Why choose a memory game?](<#why-choose-a-memory-game?>)
     *  [Fonts](<#fonts>)
     *  [Color Scheme](<#color-scheme>)
 
@@ -60,56 +61,120 @@ The below screenshot shows what the game looks like in various screensizes.
 
 ## User Stories
 
-As a user I want to ...
+As a player I want to ...
 
-* find out the opening times of the pizzeria.
-* contact Nero's Pizza for more information.
-* see what pizzas are available, the price and ingredients.
-* see if any pizza contains any allergens
-* possibly connect with Nero's Pizza on social media.
+* be able to see instructions about how to play the game.
+* be able to start a New Game.
+* see all the cards turned over at the start of the game.
+* a timer to start as soon as I click on the first card.
+* move counter to increase each time I try to make a match.
+* pair counter to increase when I find a matching pair.
+* close button on the pop-up windows to close them.
+* receive feedback when I find all pairs regarding my time and Moves made.
+* finally, I expect the cards to appear in random order when I play a new game.
 
 [Back to top](<#contents>)
 
 ## Wireframes
 
-The wireframes for Nero's Pizza were produced in [Balsamiq](https://balsamiq.com). As I started developing the website and looking for inspiration. The final website does differ but the idea remains the same.
+The wireframes for Fruit Memory were produced in [Balsamiq](https://balsamiq.com). As I started developing the game and looking for inspiration. The final game does differ but the idea remains the same.
 
 
-![Mobile wireframe image](assets/images/balsamiq-mobile-wireframe.png) 
-
-[Back to top](<#contents>)
-
-## Site Structure
-
-Nero's Pizza website has three pages. The [home page](index.html) is the default loading page, the [menu](menu.html), and the [contact us](contact-us.html). All pages are accessible from the navigation menu and for mobile using the hamburger style menu.
+![Mobile wireframe image](assets/readme/balsamiq.png) 
 
 [Back to top](<#contents>)
 
 ## Design Choices
 
-* ### Fonts
+* ### Game Design
 
-The fonts chosen were 'Fredericka The Great' for the Pizzeria's Name and slogan and  'Poppins' for the body text. They fall back to sans-serif if neither font is available on the viewing device. 
+The goal of the project was to build a fun and interactive game that can be enjoyed by the young and old. A timer is featured so they can try to improve on their quickest time. Also featured are a move counter (each time two cards are turned counts as a move) and a pair matched counter. When the pairs matched reaches the maximum of 8 the game ends and feedback is provided to the player.
 
-  *  'Fredericka The Great' was chosen for the headings. After seeing it on a past Code Institute project and liking it. 
+* ### Why choose a memory game?
 
-   * 'Poppins' is used for the body text as it is a clear font and easy to read (I tried several other fonts but found it easiest to read).
+The benefits of playing memory games are many (Source Google search - memory card game benefits):
 
- * ### Color Scheme
+  *  Improve concentration.
+  *  Improve short-memory.
+  *  Enhance critical thinking.
+  *  Improve attention span.
+  *  Can be enjoyed by the young and old. 
 
+* ### Font
 
-I played around with different colors on the website but because I am a complete novice I decided to let AI help me to decide. So, I to upload the first image users will see when the visit site to Canva's - online color palette generator. (https://www.canva.com/colors/color-palette-generator/). I liked two of the four (milano red and creole) color suggestions and thought they would suit my website. Both colors would also suit the remaining photos as they are of similar contrast and styling.
+The font chosen was 'Didact Gothic' from Google Font (https://fonts.google.com/). For the text I decided to use a Shadow effect in CSS to make the text pop out on screen.
 
-![color Palate image](assets/images/canva-palette-match.png)
+Sans-serif is used as a fallback and as the text for modal pop-ups (How to Play and End game) with Didact Gothic used to display Move and Time taken variables to make them stand out.
 
+ * ### Game background
+
+The background I choose I found after numerous searches for a fruit background that wouldn't distract from the card canvas area. I eventually settled on the below image.
+
+![Game background image](assets/images/fruitbackground.jpg)
+
+### Color palettes
+
+I decided to use canva palette generator (https://www.canva.com/colors/color-palette-generator/) when looking for colors to match the above background. 
+
+![Color palette image](assets/readme/color-palette.png)
 
 [Back to top](<#contents>)
 
-# Main Features
+## Game characters
 
-### Header Section
+The game features 8 cartoon fruit characters. To make the game more appealing to the young generation.
 
-The website site contains many features that the regular internet user would probably be familiar with, such as a header section with logo/site name, a hamburger menu (mobile)/navigation bar (for larger screens), and a footer containing social media outlets for the business.
+![Game characters image](assets/readme/game-characters.jpg)
+
+## Deck card cover
+
+The deck card cover was designed using Microsoft Paint 3D. It is a similar size to the above images. A rainbow was chosen to match the different colors of the fruit characters and appeal to younger players.  
+
+
+![Deck card cover](assets/images/fruitmcover.jpg)
+
+
+# Game Features
+
+### Game canvas
+
+The game features 4 x 4 squares. The 16 squares fit neatly onto smaller mobile screens. Media queries were added to increase the canvas and card sizes for larger screens.
+
+![Game canvas ](assets/readme/game-canvas.png)
+
+### Game tracking
+
+The game features 3 elements
+
+1. Timer (activated when first card is clicked).
+2. Moves counter (to track the number of times a player tries to match 2 cards).
+3. Pairs matched (increases each time a 2 cards are matched).
+
+![Game canvas](assets/readme/game-tracking.png)
+
+
+### Modal (Pop-Ups)
+
+The game features 2 pop-up windows which both appear over the playing area.
+
+1. How to play
+2. End Game
+
+How to Play
+
+This pop-up is activated when the player clicks on the ![New Game button](assets/readme/new-game-button.png) button. Underneath the deck cards.
+
+It explains the rules of the game and how to play.
+
+![How to Play](assets/readme/game-rules-modal.png)
+
+End Game
+
+This pop-up appears immediately after the player finds the final 8th pair of cards.
+
+It congratulates them on the achievement and provides feedback regarding the time they have taken and the number of moves. 
+
+
 
   ### Navigation Menu
 
