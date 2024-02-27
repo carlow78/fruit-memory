@@ -246,7 +246,7 @@ The method from cloning a project from GitHub is below:
 * The fonts came from [Google Fonts](https://fonts.google.com/).
 * The color palette was produced with the help of [Canvas Color Palette Generator](https://www.canva.com/colors/color-palette-generator/).
 * The icons came from [Font Awesome](https://fontawesome.com/).
-* Card game was adapted by following  [YouTube tutorial](https://www.youtube.com/watch?v=fNcJuPIZ2WE).
+* Card game was adapted by following this [YouTube tutorial](https://www.youtube.com/watch?v=wz9jeI9M9hI).
 * The [hero image](https://www.w3schools.com/howto/howto_css_hero_image.asp), [responsive menu](https://www.w3schools.com/howto/howto_css_table_responsive.asp) and [responsive contact forms](https://www.w3schools.com/howto/howto_css_responsive_form.asp) were created with the help of w3 schools online tutorials.
 * [Balsamiq](https://balsamiq.com/wireframes/) was used to create the wireframes.
 
