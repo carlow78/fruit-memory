@@ -151,19 +151,23 @@ The game features 2 pop-up windows which both appear over the playing area.
 
 <b>How to Play</b>
 
-This pop-up is activated when the player clicks on the ![New Game button](assets/readme/new-game-button.png) button. Underneath the deck of   cards.
+This pop-up is activated when the player clicks on the ![How to Play button](assets/readme/how-to-play.png) button. Underneath the deck of cards.
 
 It explains the rules of the game and how to play.
 
-![How to Play](assets/readme/game-rules-modal.png)
+![How to Play](assets/readme/game-rules-modal.png).
 
-<b>End Game</b>
+<b>End Game Modal</b>
 
 This pop-up appears immediately after the player finds the final 8th pair of cards.
 
 It congratulates them on the achievement and provides feedback regarding the time they have taken and the number of moves. 
 
 ![End Game](assets/readme/game-over-modal.png)
+
+
+
+The ![New Game](assets/readme/new-game-button.png) button - which is the 2nd button on screen. Reloads the game with a new random deck.
 
 [Back to top](<#contents>)
 
