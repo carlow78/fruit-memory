@@ -137,7 +137,7 @@ The game features 3 elements
 
 1. Timer (activated when first card is clicked).
 2. Moves counter (to track the number of times a player tries to match 2 cards).
-3. Pairs matched (increases each time a 2 cards are matched).
+3. Pairs matched (increases each time 2 cards are matched).
 
 ![Game canvas](assets/readme/game-tracking.png)
 
