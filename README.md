@@ -173,12 +173,12 @@ The ![New Game](assets/readme/new-game-button.png) button - which is the 2nd but
 
 ## Future Features 
 
-* Flip card functioning
-* A leaderboard for quickest time and least moves made
-* Audio for different languages when cards a flipped to add language learning element to game. I.e when the apple card is flipped the spanish for apple (manzana) is played
-* Ability to disable audio for above
-* Text description of cards for a different language ie - manzana underneath apple.jpg
-This element would work on larger screens 
+* Flip card functioning.
+* A leaderboard for quickest time and least moves made.
+* Audio for a different language ie Spanish  when each card is turned to add a language learning element to game. I.e when the apple card is turned the spanish for apple (manzana) is played.
+* Ability to disable audio for above.
+* Text description of cards for a different language ie - manzana underneath apple.jpg.
+  This element would work better on larger screens and could be disabled on mobile but it could still have the audio option.
 
 [Back to top](<#contents>)
 
