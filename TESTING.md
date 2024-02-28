@@ -33,7 +33,7 @@ Which I resolved by adding the comment: <i>// jshint esversion: 8</i> to the top
 
 
 
-The Javascript validator results are below:
+The Javascript validator results:
 
 ![JavaScript Validator test result](assets/testing/jshint-validator.png)
 
