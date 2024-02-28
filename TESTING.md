@@ -80,7 +80,7 @@ Fruit Memory was tested on the following browsers with no visible issues for the
 
 Issue - Game was stopping when a pair of cards were matched.
 
-Background and Solution - During development I came across an issue that I could not resolve myself and could not find any help for it online. So I contacted Code Institute's online Tutor Support chat for my first time. I shared my workspace using Gitpod and explained my issue to the tutor Roo. He quickly identified the problem and told me how to fix it. I had my IF statement backwards. I was checking for cards that don't match first before a pair match. 
+Background and Solution - During development I came across an issue that I could not resolve myself and could not find any help for online. So I contacted Code Institute's online Tutor Support chat for my first time. I shared my workspace using Gitpod and explained my issue to the tutor Roo. He quickly identified the problem and told me how to fix it. I had my IF statement backwards. I was checking for cards that don't match first before a pair match. 
 
 Learning outcome - The lesson I learned here is being a total newbie to programming is not to be afraid to ask for help from others with more experience after you have tried your best to resolve the issue yourself.
 
