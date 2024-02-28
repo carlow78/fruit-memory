@@ -1,6 +1,6 @@
 # Development
 
-The website was developed using Mobile First development. Following the same method as Code Institutes Love Running Project. The website was designed using Chrome Developer Tools to work on the Samsung Galaxy Fold in Portrait mode. Media queries were then added for larger screens.
+The game was developed using Mobile First development. Following the same method as Code Institute's Love Running and Love Math's Walkthrough Project examples. The game was designed using Chrome Developer Tools to work on the Samsung Galaxy Fold in Portrait mode. Media queries were then added for larger screens.
 
 # Testing
 

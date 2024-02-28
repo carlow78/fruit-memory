@@ -183,7 +183,7 @@ The ![New Game](assets/readme/new-game-button.png) button - which is the 2nd but
 [Back to top](<#contents>)
 
 # Technologies Used
-* [HTML5](https://html.spec.whatwg.org/) - provides the content and structure for the website.
+* [HTML5](https://html.spec.whatwg.org/) - provides the content and structure for the game.
 * [Javascript](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript) - scripting language and primary element of PP2.
 * [CSS](https://www.w3.org/Style/CSS/Overview.en.html) - provides the styling.
 * [Balsamiq](https://balsamiq.com/wireframes/) - was used to create the wireframes.
