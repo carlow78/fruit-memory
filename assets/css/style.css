@@ -41,7 +41,6 @@ span {
   color: darkblue;
   text-shadow: 3px 3px lightgray;
 
-
 }
 
 /* Styling for 2 buttons New Game and How to Play */
@@ -66,8 +65,8 @@ button {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgb (0,0,0,0);
-  background-color: rgba(0, 0, 0, 0.7); 
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
 }
 
 /* Modal Content/Box */
@@ -106,8 +105,8 @@ button {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgb (0,0,0,0);
-  background-color: rgba(0, 0, 0, 0.7); 
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
 }
 
 /* Modal Content/Box */

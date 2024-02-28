@@ -4,29 +4,40 @@ The website was developed using Mobile First development. Following the same met
 
 # Testing
 
-## Code Validation
-The Nero's Pizza site has be tested fully.
+## HTML and CSS Validation
+<b>Fruit Memory</b> a Javascript Memory Card Game has been tested fully.
 
-  All the code has been run through the [W3C html Validator](https://validator.w3.org/) and the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/). Minor errors were found on the pages and in the CSS file. All errors were fixed some with the help with the Stack Overflow community.
+  All the code has been run through the [W3C html Validator](https://validator.w3.org/) and the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/). Minor errors were discovered such as missing ; easily fixed on both files.
 
-The HTML validator results for each page are below:
+ 
 
-* Home page
 
-![W3C Validator test result](assets/images/w3-validator-index.png)
+The HTML validator results for the index page are below:
 
-* Menu page
-
-![W3C Validator test result](assets/images/w3-validator-menu.png)
-
-* Contact us page
-
-![W3C Validator test result](assets/images/w3-validator%20contactus.png)
-
+![W3C Validator test result](assets/testing/w3-html-validator.png)
 
 The CSS validator results are below:
 
-![CSS Validator test result](assets/images/w3-css-validation.png)
+![CSS Validator test result](assets/testing/jigsaw-css-validator.png)
+
+## Javascript Validation
+
+ The JavaScript file was validated using [Jshint](https://jshint.com/). Results are below. As with the HTML and CSS files minor issues such as missing quotes were easily fixed. 
+
+  The only issue I had to research to resolve was the below error.
+Which I resolved by adding the comment: <i>// jshint esversion: 8</i> to the top of my javascript file. I found the fix here on a [Stackover flow post](https://stackoverflow.com/questions/27441803/why-does-jshint-throw-a-warning-if-i-am-using-const)
+
+
+  
+  ![JShint error](assets/testing/jshint-error.png)
+
+
+
+The Javascript validator results are below:
+
+![JavaScript Validator test result](assets/testing/jshint-validator.png)
+
+
 
 ## Responsiveness Test
 
@@ -34,7 +45,7 @@ The responsive design tests were carried out manually with the [Google Chrome De
 
 Manual tests were also carried on the developer's own devices.
 
-* OnePlus Nord 3 5G (2023)using Chrome - no issues
+* OnePlus Nord 3 5G (2023) using Chrome - no issues
 * iPad 10.5" (6th Generation) (2018) using Safari - no issues.
 * Amazon Fire HD 8 (2020) using Amazon Silk - no issues.
 
@@ -49,7 +60,7 @@ Manual tests were also carried on the developer's own devices.
 
 ## Browser Compatibility
 
-Nero's Pizza site was tested on the following browsers with no visible issues for the user. 
+Fruit Memory was tested on the following browsers with no visible issues for the user. 
 
 * Google Chrome
 * Microsoft Edge
@@ -65,20 +76,13 @@ Nero's Pizza site was tested on the following browsers with no visible issues fo
 * ### Resolved
 
 
-*Home page*
+<b>Function update issue</b> - 
 
-No major issue except for trailing div and missing > which were left after I removed code previously
+Issue - Game was stopping when a pair of cards were matched.
 
-*Menu page*
-    
-My main was the following Error message - <i>a table row has 2 columns wide and exceeded the column count</i>.
+Background and Solution - During development I came across an issue that I could not resolve myself and could not find any help for it online. So I contacted Code Institute's online Tutor Support chat for my first time. I shared my workspace using Gitpod and explained my issue to the tutor Roo. He quickly identified the problem and told me how to fix it. I had my IF statement backwards. I was checking for cards that don't match first before a pair match. 
 
- I copied the error message into Google and found someone else had experienced the same error message.
-
-After I added colspan="2" to my pizza ingredients my issue was resolved - 
-
-[Stackover Flow Colspan issue](https://stackoverflow.com/questions/7132223/a-table-row-was-2-columns-wide-and-exceeded-the-column-count-established-by-the)
-    Resolved by User PeeHaa 
+Learning outcome - The lesson I learned here is being a total newbie to programming is not to be afraid to ask for help from others with more experience after you have tried your best to resolve the issue yourself.
 
 ## Additional Testing
 
@@ -93,30 +97,13 @@ The site was also tested using [Google Lighthouse](https://developers.google.com
 
 
 
-# Home (Index)
+  <u>Lighthouse Desktop results</u>
 
-![Lighthouse test results 1](assets/images/lh-index.png)
+![Lighthouse test Desktop](assets/testing/lighthouse-desktop.png)
 
-# Menu
+  <u>Lighthouse Mobile results</u>
 
-![Lighthouse test results 2](assets/images/lh-menu.png)
-
-
-
-# Contact Us
-
-![Lighthouse test results 2](assets/images/lh-contactus.png)
-
-This part of the testing process showed that the site's performance was pretty slow ~60% (LCP - Largest Contentful Paint) was bringing the score down, primarily due to the image sizes.
-
-# Fixing LCP issue
-
-1. Using Windows Photo Editor all photos were reduced in size (1024x) and quality reduced but to a point the image wasnt too comprised. 
-2. Afterwards the images were saved as .jpg. 
-3. Next step, was to save jpg as webp using [convertio](https://convertio.co/) an online file convertor tool. (webp allows websites to display high-quality images - but with much smaller file sizes jpeg, png etc - [Source - Adobe](https://www.adobe.com/ie/creativecloud/file-types/image/raster/webp-file.html) files). 
- 4. All the images needed to be removed before adding the reduced photos to the repository in their place
- Outcome - Once this was done the performance went from ~60% to ~90%. 
- 
+![Lighthouse test Mobile](assets/testing/lighthouse-mobile.png)
 
 
 Back to [README.md](./README.md#testing).

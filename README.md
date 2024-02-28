@@ -210,7 +210,7 @@ Note: Early deployment ensures bugs or issues are discovered at the earliest pos
   4. Under **Default Branch** make sure 'main' is selected as the 'branch'  and '/root' as the folder.
   5. Finally, click the **Save** button under the **Branch** section
   6. Depending on the size of the content the deployed website will finally appear at the top of Github with a link to **Visit site**.
-![GitHub pages deployed image](assets/testing/github-deploy.png)
+![GitHub pages deployed image](assets/readme/github-deploy.png)
 
   The live link to the Github repository can be found here - https://github.com/carlow78/fruit-memory/
 
@@ -222,7 +222,7 @@ A Fork is a new repository for sharing and collaborating with others without imp
 
 2. On the right hand side of the page inline with the repository name is a button called **'Fork'**, click on the **Create Fork** button to create a copy of the original repository in your GitHub Account.
 
-![GitHub forking process image](assets/testing/fork-it.png)
+![GitHub forking process image](assets/readme/fork-it.png)
 
 ### **To create a local clone of this project**
 The method from cloning a project from GitHub is below:
@@ -235,7 +235,7 @@ The method from cloning a project from GitHub is below:
 5. Take note of the 'local path' for future reference
 6. Click on the **Clone** button
 
-![Cloning Repository](assets/testing/clone-it.png)
+![Cloning Repository](assets/readme/clone-it.png)
 
 
 [Back to top](<#contents>)
@@ -256,9 +256,8 @@ were created with the help of W3 schools online tutorials.
 
 ### Media
 
-* The card character are from 
-* The photos were compressed using Windows Photos Application
-* Conversion of photos using [Convertio](https://convertio.co/) from .jpg to .webp
+* The card characters are from [Freepik](https://www.freepik.com/free-vector/cute-fruit-berry-cartoon-characters-illustrations-set-comic-stickers-with-funny-caricatures-happy-lemon-orange-mango-strawberry-personages-isolated-white_20827612.htm#query=cute%20cartoon%20fruit&position=11&from_view=keyword&track=ais&uuid=66a8faad-a13c-4bff-b040-592762bebf70)
+* The deck cover was created in [Microsoft's Paint 3D](https://apps.microsoft.com/detail/9nblggh5fv99?hl=en-US&gl=IE)
 
 [Back to top](<#contents>)
 

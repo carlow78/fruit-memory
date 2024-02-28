@@ -52,7 +52,6 @@ https://www.youtube.com/watch?v=wz9jeI9M9hI
 
 */
 
-
 // Shuffle cards function
 
 window.onload = function () {
@@ -70,7 +69,6 @@ function shuffleCards() {
   cardList = cardFruits.concat(cardFruits);
 
   // Shuffle the cards
-
 
   for (let x = 0; x < cardList.length; x++) {
 
