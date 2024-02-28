@@ -49,7 +49,7 @@ The below screenshot shows what the game looks like in various screensizes.
 
 ## User Stories
 
-As a player I want to ...
+As a user I want to ...
 
 * be able to see instructions about how to play the game.
 * be able to start a New Game.
@@ -110,7 +110,7 @@ I decided to use canva palette generator (https://www.canva.com/colors/color-pal
 
 ## Game characters
 
-The game features 8 cartoon fruit characters. To make the game more appealing to the young generation.
+The game features 8 cartoon fruit characters from Freepik.com. To make the game more appealing to the young generation.
 
 ![Game characters image](assets/readme/game-characters.jpg)
 
@@ -151,7 +151,7 @@ The game features 2 pop-up windows which both appear over the playing area.
 
 <b>How to Play</b>
 
-This pop-up is activated when the player clicks on the ![New Game button](assets/readme/new-game-button.png) button. Underneath the deck cards.
+This pop-up is activated when the player clicks on the ![New Game button](assets/readme/new-game-button.png) button. Underneath the deck of   cards.
 
 It explains the rules of the game and how to play.
 
@@ -171,9 +171,10 @@ It congratulates them on the achievement and provides feedback regarding the tim
 
 * Flip card functioning
 * A leaderboard for quickest time and least moves made
-* Audio for different languages when cards a flipped ie spanish for apple (manzana) is played
+* Audio for different languages when cards a flipped to add language learning element to game. I.e when the apple card is flipped the spanish for apple (manzana) is played
 * Ability to disable audio for above
 * Text description of cards for a different language ie - manzana underneath apple.jpg
+This element would work on larger screens 
 
 [Back to top](<#contents>)
 
@@ -183,7 +184,7 @@ It congratulates them on the achievement and provides feedback regarding the tim
 * [CSS](https://www.w3.org/Style/CSS/Overview.en.html) - provides the styling.
 * [Balsamiq](https://balsamiq.com/wireframes/) - was used to create the wireframes.
 * [Visual Studio](https://code.visualstudio.com/) - was used to code locally.
-* [Github Desktop](https://desktop.github.com/) - was installed and used to track changes made locally.
+* [Github Desktop](https://desktop.github.com/) - was installed and used to track changes made locally. Summary and comments were added for each commit added to Github.
 * [Git for Windows](https://git-scm.com/download/win) - was installed to push changes to github made locally using Visual Studio and managed by Github Desktop.
 * [Github](https://github.com/) - was used to store the project's webpages and images. After every session I pushed the updates to github for further validation and testing. 
 
@@ -243,17 +244,19 @@ The method from cloning a project from GitHub is below:
 
 ### Content
 
-* The fonts came from [Google Fonts](https://fonts.google.com/).
+* The font came from [Google Fonts](https://fonts.google.com/).
 * The color palette was produced with the help of [Canvas Color Palette Generator](https://www.canva.com/colors/color-palette-generator/).
-* The icons came from [Font Awesome](https://fontawesome.com/).
 * Card game was adapted by following this [YouTube tutorial](https://www.youtube.com/watch?v=wz9jeI9M9hI).
-* The [hero image](https://www.w3schools.com/howto/howto_css_hero_image.asp), [responsive menu](https://www.w3schools.com/howto/howto_css_table_responsive.asp) and [responsive contact forms](https://www.w3schools.com/howto/howto_css_responsive_form.asp) were created with the help of w3 schools online tutorials.
+* The [Pop-up modals](https://www.w3schools.com/howto/howto_css_modals.asp)
+were created with the help of W3 schools online tutorials.
+* The timer feature was produced with the help of this [Stackoverflow post](https://stackoverflow.com/questions/55031097/how-do-i-start-a-timer-on-a-click#:~:text=the%20most%20basic%20way%20to,('%23button').)
+* End game logic, game inspiration and idea from previous Code Institute project by [Moira Hartigan](https://moirahartigan.github.io/Portfolio-2---Alien-Memory-Game/)
 * [Balsamiq](https://balsamiq.com/wireframes/) was used to create the wireframes.
 
 
 ### Media
 
-* The photos all came from [Pexel](https://www.pexels.com/)
+* The card character are from 
 * The photos were compressed using Windows Photos Application
 * Conversion of photos using [Convertio](https://convertio.co/) from .jpg to .webp
 
@@ -261,6 +264,6 @@ The method from cloning a project from GitHub is below:
 
 # Acknowledgements
 
-The site was completed as a Portfolio 2 Project piece for the Full Stack Software Developer (e-Commerce) Diploma at the [Code Institute](https://codeinstitute.net/). Thank you to my mentor Precious Ijege for his input. And to our Code Institute Facilatator Kamil Wojciechowski for sharing  the Slack community, the Stack Overflow community and all at the Code Institute for their help and support.
+The site was completed as a Portfolio 2 Project piece for the Full Stack Software Developer (e-Commerce) Diploma at the [Code Institute](https://codeinstitute.net/). Thank you to my mentor Precious Ijege for his input. And to our Code Institute Course Facilatator Kamil Wojciechowski for his input and for sharing Moira's excellent Project, the Slack community, the Stack Overflow community, W3 schools and all at the Code Institute for their help and support.
 
 [Back to top](<#contents>)

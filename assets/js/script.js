@@ -49,6 +49,7 @@ playspan.onclick = function () {
 /* 
 Card game functioning adapted following along with online tutorial 
 https://www.youtube.com/watch?v=wz9jeI9M9hI
+
 */
 
 
@@ -90,6 +91,12 @@ function shuffleCards() {
 To start the game the below function will copy and paste our deck of fruit cards (array) randomly on screen.
 Starting with the first (1) square on screen down to the last (16).
 
+*/
+
+/* Card characters from Freepik.com - images cropped using Photo Editor
+ 
+https://www.freepik.com/free-vector/cute-fruit-berry-cartoon-characters-illustrations-set-comic-stickers-with-funny-caricatures-happy-lemon-orange-mango-strawberry-personages-isolated-white_20827612.htm#query=cute%20cartoon%20fruit&position=11&from_view=keyword&track=ais&uuid=66a8faad-a13c-4bff-b040-592762bebf70" Image by pch.vector
+ 
 */
 
 function startGame() {
